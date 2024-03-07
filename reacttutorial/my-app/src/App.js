@@ -3,7 +3,7 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
+    <><div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -19,6 +19,12 @@ function App() {
         </a>
       </header>
     </div>
+    <div>
+      <button className="button" onclick="document.getElementById('App-link').display:'none'">
+          Hide learn react title
+      </button>
+    </div>
+    </>
   );
 }
 
