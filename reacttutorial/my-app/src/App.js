@@ -10,6 +10,7 @@ function App() {
           Edit <code>src/App.js</code> and save to reload.
         </p>
         <a
+          id="App-link"
           className="App-link"
           href="https://reactjs.org"
           target="_blank"
@@ -20,12 +21,16 @@ function App() {
       </header>
     </div>
     <div>
-      <button className="button" onclick="document.getElementById('App-link').display:'none'">
+      <button className="button" onClick={hideTitle}>
           Hide learn react title
       </button>
     </div>
     </>
   );
+}
+
+function hideTitle(){
+    document.getElementById("App-link").style.display = "none";
 }
 
 export default App;
