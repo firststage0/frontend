@@ -1,0 +1,7 @@
+{   "name": "my-project",
+    "type": "module",
+    "Москва" : "Moscow, RU",
+    "Санкт-петербург" : "Saint Petersburg, RU",
+    "Воронеж" : "Vorohezh, RU",
+    "Самара" : "Samara, RU"
+}
