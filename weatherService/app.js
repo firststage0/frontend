@@ -7,20 +7,19 @@
 //     citiesJson = request.response;
 //     return citiesJson;
 // }
+
 window.addEventListener('load', () => {
-    executeResponse(selectedElement.value);
+    setCityRequest();
 });
-const apiKey = "57f7df1e3063971e738d4e9c5af1bb15";
+
+var selectedCity;
 var selectedElement = document.getElementById('cities');
-// const citiesData = {
-//     "Москва": "Moscow, RU",
-//     "Санкт-петербург": "Saint Petersburg, RU",
-//     "Воронеж": "Voronezh, RU",
-//     "Самара": "Samara, RU"
-// }
+
+const apiKey = "57f7df1e3063971e738d4e9c5af1bb15";
+
 
 function setCityRequest() {
-    const selectedCity = selectedElement.value;
+    selectedCity = selectedElement.value;
     executeResponse(selectedCity);
     console.log(selectedCity);
     return;
@@ -28,7 +27,7 @@ function setCityRequest() {
 
 function executeResponse(cityForRequest) {
     const apiURL = "https://api.openweathermap.org/data/2.5/weather?q=" + cityForRequest + "&appid=" + apiKey + "&units=metric";
-    const weatherDiv = document.getElementById("forWeather");
+
     fetch(apiURL)
         .then(res => {
             if (!res.ok) {
@@ -38,9 +37,17 @@ function executeResponse(cityForRequest) {
         })
         .then(data => {
             console.log(data);
-            weatherDiv.innerHTML = "Current temperature in " + cityForRequest + " is: " + data.main.temp;
+            setCardProps(data)
         })
         .catch(error => {
             console.error("Error: ", error);
         })
 }
+
+function setCardProps(data) {
+    const weatherDiv = document.getElementById("card-title").innerHTML = selectedCity + "  ";
+    const tempOnCard = document.getElementById("temperature").innerHTML = "Температура " + data.main.temp + " \u2103";
+    const feelsLike = document.getElementById("feels-like").innerHTML = "Ощущается как " + data.main.feels_like + " \u2103";
+    const windSpeed = document.getElementById("wind-speed").innerHTML = "Скорость ветра " + data.wind.speed + " м/с";
+}
+

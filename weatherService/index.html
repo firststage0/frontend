@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/style.css">
 </head>
 
-<body style="background-color: gray;">
+<body style="background-color: lightgrey;">
     <div class="container">
         <div class="listOfCities">
             <form>
@@ -19,13 +19,18 @@
                     <option value="Воронеж">Воронеж</option>
                     <option value="Самара">Самара</option>
                 </select>
-            </form>     
+            </form>
         </div>
-        <div class="weatherDataDiv">
-            <p id="forWeather"></p>
+        <div class="card">
+            <div class="card-title" id="card-title"></div>
+            <div class="description">
+                <div class="temperature" id="temperature"></div>
+                <div class="feels-like" id="feels-like"></div>
+                <div class="wind-speed" id="wind-speed"></div>
+            </div>
         </div>
     </div>
-        
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="/app.js"></script>
 </body>
 
