@@ -1,19 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather</title>
     <link rel="stylesheet" href="/style.css">
 </head>
+
 <body style="background-color: gray;">
-    <div class="buttons">
-        <button id="Msc" onclick="setCityRequest('Москва')">Москва</button>
-        <button id="Spb" onclick="setCityRequest('Санкт-петербург')">Санкт-петербург</button>
-        <button id="Vrn" onclick="setCityRequest('Воронеж')">Воронеж</button>
-        <button id="Smr" onclick="setCityRequest('Самара')">Самара</button>
-        <div class="weatherDataDiv"><p id="forWeather"></p></div>
+    <div class="listOfCities">
+        <form>
+            <label for="cities" name="cities">Выберите город</label>
+            <select name="cities" id="cities" onchange="setCityRequest()">
+                <option value="Москва">Москва</option>
+                <option value="Санкт-петербург">Санкт-петербург</option>
+                <option value="Воронеж">Воронеж</option>
+                <option value="Самара">Самара</option>
+            </select>
+        </form> 
+    </div>
+    <div class="weatherDataDiv">
+        <p id="forWeather"></p>
     </div>
     <script src="/app.js"></script>
 </body>
+
 </html>

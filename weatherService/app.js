@@ -7,18 +7,22 @@
 //     citiesJson = request.response;
 //     return citiesJson;
 // }
+window.addEventListener('load', () => {
+    executeResponse(selectedElement.value);
+});
 const apiKey = "57f7df1e3063971e738d4e9c5af1bb15";
-const citiesData = {
-    "Москва": "Moscow, RU",
-    "Санкт-петербург": "Saint Petersburg, RU",
-    "Воронеж": "Voronezh, RU",
-    "Самара": "Samara, RU"
-}
-function setCityRequest(city) {
+var selectedElement = document.getElementById('cities');
+// const citiesData = {
+//     "Москва": "Moscow, RU",
+//     "Санкт-петербург": "Saint Petersburg, RU",
+//     "Воронеж": "Voronezh, RU",
+//     "Самара": "Samara, RU"
+// }
 
-    const cityForRequest = citiesData[city];
-    executeResponse(cityForRequest);
-    console.log(cityForRequest);
+function setCityRequest() {
+    const selectedCity = selectedElement.value;
+    executeResponse(selectedCity);
+    console.log(selectedCity);
     return;
 }
 
