@@ -9,20 +9,23 @@
 </head>
 
 <body style="background-color: gray;">
-    <div class="listOfCities">
-        <form>
-            <label for="cities" name="cities">Выберите город</label>
-            <select name="cities" id="cities" onchange="setCityRequest()">
-                <option value="Москва">Москва</option>
-                <option value="Санкт-петербург">Санкт-петербург</option>
-                <option value="Воронеж">Воронеж</option>
-                <option value="Самара">Самара</option>
-            </select>
-        </form> 
+    <div class="container">
+        <div class="listOfCities">
+            <form>
+                <label for="cities" name="cities">Выберите город <br></label>
+                <select name="cities" id="cities" onchange="setCityRequest()">
+                    <option value="Москва">Москва</option>
+                    <option value="Санкт-петербург">Санкт-петербург</option>
+                    <option value="Воронеж">Воронеж</option>
+                    <option value="Самара">Самара</option>
+                </select>
+            </form>     
+        </div>
+        <div class="weatherDataDiv">
+            <p id="forWeather"></p>
+        </div>
     </div>
-    <div class="weatherDataDiv">
-        <p id="forWeather"></p>
-    </div>
+        
     <script src="/app.js"></script>
 </body>
 

@@ -2,3 +2,10 @@
     font-size: 20px;
     color: white;
 }
+
+.container{
+    display: flex;
+    .weatherDataDiv{
+        margin-left: 1%;
+    }
+}
