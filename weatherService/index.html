@@ -7,7 +7,13 @@
     <link rel="stylesheet" href="/style.css">
 </head>
 <body style="background-color: gray;">
-    <div class="weatherDataDiv"><p id="forWeather"></p></div>
+    <div class="buttons">
+        <button id="Msc" onclick="setCityRequest('Москва')">Москва</button>
+        <button id="Spb" onclick="setCityRequest('Санкт-петербург')">Санкт-петербург</button>
+        <button id="Vrn" onclick="setCityRequest('Воронеж')">Воронеж</button>
+        <button id="Smr" onclick="setCityRequest('Самара')">Самара</button>
+        <div class="weatherDataDiv"><p id="forWeather"></p></div>
+    </div>
     <script src="/app.js"></script>
 </body>
 </html>
