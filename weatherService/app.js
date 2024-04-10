@@ -26,7 +26,7 @@ function setCityRequest() {
 }
 
 function executeResponse(cityForRequest) {
-    const apiURL = "https://api.openweathermap.org/data/2.5/weather?q=" + cityForRequest + "&appid=" + apiKey + "&units=metric";
+    const apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${cityForRequest}&appid=${apiKey}&units=metric`;
 
     fetch(apiURL)
         .then(res => {
